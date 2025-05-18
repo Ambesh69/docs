@@ -1,0 +1,63 @@
+---
+title: "Eido Labs - Tech Architecture"
+description: "Description of your new file."
+---
+
+**Multi-Hierarchical Agent Swarm Architecture**
+
+- Implemented using LangGraph for orchestration and state management across agents
+- Separation of concerns with dedicated agents (Risk, Strategy, Execution, Monitoring, Governance) operating independently yet collaboratively
+- Built-in redundancy and fallback mechanisms to prevent hallucinations and ensure reliability
+- Agent communication via message-passing protocol with validation layers
+
+**Generative UI with Dynamic Component Rendering**
+
+- Real-time UI components generated based on current DeFi state and user actions
+- Transaction preview and simulation before execution
+- Adaptive interface that adjusts complexity based on user expertise level
+- Integrated wallet connection widgets and transaction status tracking
+
+**Advanced Thread-Based Context Management**
+
+- Persistent conversation threads maintaining full transaction history and decision context
+- Multi-session memory allowing agents to learn from past interactions
+- Context window optimization for efficient token usage
+- Vector database integration for semantic search across historical interactions
+
+**Embedded Wallet Infrastructure**
+
+- Account abstraction for gasless transactions and improved UX
+- Social recovery and multi-signature support for enhanced security
+- Seamless onboarding with email/social login options
+- Cross-chain compatibility preparation for future expansion
+
+**Fine-tuned LLM Stack**
+
+- Custom-trained models on Berachain documentation, protocols, and PoL mechanics
+- Specialized tokenizers for DeFi terminology and blockchain addresses
+- RAG (Retrieval Augmented Generation) pipeline for real-time protocol updates
+- Continuous learning from on-chain data and user interactions
+
+**Event-Driven Architecture**
+
+- Real-time blockchain event listeners for price updates, emissions, and governance proposals
+- Webhook integration for external protocol notifications
+- Message queue system for reliable agent-to-agent communication
+- Circuit breakers and rate limiting for API protection
+
+**Modular Plugin System**
+
+- Extensible architecture supporting new protocols and chains
+- Standardized interfaces for third-party integrations
+- Protocol-specific adapters for BEX, Kodiak, and other Berachain DEXs
+
+At the core of Eido is the BBM—an orchestrated swarm of agents specialized across DeFi user flows:\
+\
+- Risk Profiling Agent: Understands a user’s risk appetite via wallet data or manual input.\
+- Strategy Optimization Agent: Builds yield-maximizing strategies based on real-time data and PoL emissions.\
+- Execution Agent: Handles swaps, LP provisioning, and BGT staking via embedded wallet.\
+- Monitoring Agent: Observes yield decay, impermanent loss, and triggers rebalances.\
+- Governance Agent: Delegates BGT, votes on protocol upgrades, and detects bait bribes.\
+These agents operate in sync via LangGraph, integrating seamlessly with Berachain-native protocols like BEX, Kodiak, Honeypot, Infrared, and more.
+
+![Technicalarchitecture Sv](/images/Technicalarchitecture.svg)
